@@ -12,12 +12,16 @@ export class AppComponent {
   title = 'shop-bridge-project';
 
   constructor(private router: Router) {
+    /** On load if user is authorized then load 'home' page
+     * else load login page
+     */
     if(this.isUserAuthorized) {
       this.router.navigate(['home'])
     } else {
       this.router.navigate(['login'])
     }
 
+    //show header only for loged-in user
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
         if (event.url === '/login') {

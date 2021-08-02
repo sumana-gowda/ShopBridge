@@ -1,0 +1,41 @@
+.table-data {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.full-width-table {
+  width: 100%;  
+}
+
+::ng-deep .mat-cell, .mat-footer-cell {
+  font-size: 12px;
+}
+
+.fake-link {
+  color: rgb(43, 43, 187);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.available {
+  color: green;
+}
+
+.not-available {
+  color: red;
+}
+
+.add-btn {
+  float: right
+}
+
+.success {
+  background-color: green;
+  color: white
+}
+
+.header-label {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}

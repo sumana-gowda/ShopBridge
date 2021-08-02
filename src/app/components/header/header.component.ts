@@ -8,13 +8,19 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  userName = sessionStorage.getItem('userName');
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
+  /**
+   * Remove the session storage value on logout
+  **/
   logout() {
     sessionStorage.removeItem('authorizedUser');
+    sessionStorage.removeItem('userName');
     this.router.navigate(['login'])
   }
 

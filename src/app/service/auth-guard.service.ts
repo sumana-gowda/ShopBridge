@@ -9,9 +9,13 @@ export class AuthGuardService implements CanActivate{
   constructor(private _router:Router ) {
   }
 
+  /**
+   * Activate users iif authorizedUser value in sessionStorage is set to 1
+   * @param route 
+   * @param state 
+   * @returns boolean value
+   */
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    
-      //check some condition  
       if (sessionStorage.getItem('authorizedUser') == '1')  {
           return true;
       } 

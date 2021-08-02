@@ -2,7 +2,7 @@ mat-card {
   max-width: 400px;
   margin: 2em auto;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
   border-color: rgba(27,31,35,.35);
   background-color: rgb(232, 235, 243)
 }

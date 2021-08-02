@@ -1,0 +1,6 @@
+.bg-img {
+    background-image: url("../../../assets/images/warehouse.png");
+    /* background-position: left -150px top 150px, right -105px top -150px, left 390px top 700px, left bottom -250px; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

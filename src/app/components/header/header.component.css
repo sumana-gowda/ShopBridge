@@ -33,3 +33,13 @@
   .spacer {
     flex: 1;
   }
+
+  .icons {
+    font-size: 30px;
+  }
+
+  .headerfixed {
+    z-index: 20;
+    position: fixed;
+    top: 0px;
+}

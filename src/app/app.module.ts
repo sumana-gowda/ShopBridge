@@ -11,6 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthGuardService } from './service/auth-guard.service';
+import { DataTableComponent } from './components/data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { AppService } from './service/app.service';
+import { EditItemPopupComponent } from './components/edit-item-popup/edit-item-popup.component';
+import { ConfirmationPopupComponent } from './components/confirmation-popup/confirmation-popup.component';
+import { SnackBarService } from './service/snack-bar.service';
 
 
 @NgModule({
@@ -18,7 +26,10 @@ import { AuthGuardService } from './service/auth-guard.service';
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    DataTableComponent,
+    EditItemPopupComponent,
+    ConfirmationPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +38,12 @@ import { AuthGuardService } from './service/auth-guard.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-  providers: [AuthGuardService],
+  providers: [AuthGuardService, AppService, SnackBarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
